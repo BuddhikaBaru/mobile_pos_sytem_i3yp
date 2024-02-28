@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:orientation="vertical"
+    tools:context=".Main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:background="@color/jade_green"
+        android:elevation="10dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/headerbox">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/dbhead"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expcounta"
+            android:layout_below="@+id/dbhead"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expcountTxt"
+            android:layout_below="@+id/dbhead"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/expcounta"
+            android:text=": Expiring Items"
+            />
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/lowstcountTxt"-->
+<!--            android:layout_below="@+id/dbhead"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:shadowColor="@color/black"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_toLeftOf="@id/lowstcounta"-->
+<!--            android:text="Stock Low : "-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/lowstcounta"-->
+<!--            android:layout_below="@+id/dbhead"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:shadowColor="@color/black"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="20dp"/>-->
+
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="#53ba6a"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="0dp"
+            android:id="@+id/newBillCard">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cartsvg"
+                    android:id="@+id/newbillVector"/>
+
+                <TextView
+                    android:id="@+id/newBillTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newbillVector"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/new_bill"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/checkStockCard"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/searchsvg"
+                    android:id="@+id/searchInvVector" />
+
+                <TextView
+                    android:id="@+id/searchInvTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchInvVector"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/check_inventory"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </LinearLayout>
+    
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp">
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/addStockButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stock"
+            app:icon="@drawable/ic_add_24dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            />
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/addProductButton"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/Product"
+            app:icon="@drawable/ic_add_24dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/addCategoryButton"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/Category"
+            app:icon="@drawable/ic_add_24dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/viewCategoryButton">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/baseline_preview_24"
+                android:id="@+id/viewCatImg"
+                android:layout_centerHorizontal="true"
+                />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewCatImg"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/view_category"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/viewProductButton">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/baseline_preview_24"
+                    android:id="@+id/viewProdImg"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewProdImg"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/view_products"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--dashboard layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <!--button layer 1-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/view_stock_button"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@drawable/rounded_corners"-->
+<!--            android:shadowColor="@color/black"-->
+<!--            android:text="@string/stock_view"-->
+<!--            android:textColor="@color/white" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/new_bill_button"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@drawable/rounded_corners"-->
+<!--            android:shadowColor="@color/black"-->
+<!--            android:text="@string/new_bill"-->
+<!--            android:textColor="@color/white" />-->
+
+<!--    </LinearLayout>-->
+
+
+<!--    &lt;!&ndash;button layer 2&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="10dp">-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/addStockButton"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:shadowColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="@string/add_stock"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/addProductButton"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:shadowColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="@string/add_product"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/addCategoryButton"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="120dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:shadowColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="@string/add_category"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="12sp" />&ndash;&gt;-->
+
+<!--    </LinearLayout>-->
+
+
+
+<!--button layer 3-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_margin="10dp">-->
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:background="@drawable/rounded_corners"-->
+<!--            android:text="@string/view_category"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:shadowColor="@color/black"-->
+<!--            -->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="70dp"-->
+
+<!--            android:background="@drawable/rounded_corners"-->
+<!--            android:text="@string/view_products"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:shadowColor="@color/black"/>-->
+
+<!--    </LinearLayout>-->
+
+
+
+<!--button layer 4-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_Button"
+            android:text="@string/reports"
+            android:layout_margin="10dp"
+            android:background="@color/jade_green"
+            android:textStyle="bold"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="10dp">-->
+
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:id="@+id/report_Button"-->
+<!--            android:background="@drawable/rounded_corners"-->
+<!--            android:text="@string/reports"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:shadowColor="@color/black"/>-->
+
+<!--    </LinearLayout>-->
+
+    <!--button layer 5-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:textStyle="bold"
+            android:textColor="@color/dark_crimson"
+            android:id="@+id/logOutButton"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditDeleteCategory"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_or_delete_category"
+        android:textSize="24sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/categoryID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_weight="5"
+            android:height="48sp"
+            android:autofillHints=""
+            android:editable="false"
+            android:ems="12"
+            android:hint="@string/category_id"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="@color/editTextHintColor"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_weight="5"
+            android:height="48sp"
+            android:ems="12"
+            android:hint="@string/edit_category"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="@color/editTextHintColor"
+            android:textSize="20sp"
+            android:autofillHints="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editCategoryDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_weight="5"
+            android:height="48sp"
+            android:ems="12"
+            android:hint="@string/edit_category_description"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHint="#A1887F"
+            android:textSize="20sp"
+            android:autofillHints="" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/updateCategoryButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Update"
+            android:textColor="@color/dark_aqua"
+            android:shadowColor="@color/black"/>
+
+        <Button
+            android:id="@+id/deleteCategoryButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/delete"
+            android:textColor="@color/dark_crimson"
+            android:shadowColor="@color/black"/>
+
+        <Button
+            android:id="@+id/toViewCatButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/back"
+            android:textColor="@color/normal_blue"
+            android:shadowColor="@color/dark_aqua"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

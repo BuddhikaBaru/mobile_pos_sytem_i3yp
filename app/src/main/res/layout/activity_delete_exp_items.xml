@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteExpItems"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chequesCard"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:id="@+id/chequesbox">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/chequesHead"
+                android:text="Expiring Items"
+                android:layout_centerHorizontal="true"
+                android:textSize="24sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idView"
+                android:text="ID"
+                android:layout_below="@id/chequesHead"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setId"
+                android:layout_toStartOf="@id/idView"
+                android:layout_below="@id/chequesHead"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/_0000_00"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/prodNameView"
+                android:text="Product Name"
+                android:layout_below="@id/idView"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/prodNameSet"
+                android:layout_toStartOf="@id/prodNameView"
+                android:layout_below="@id/setId"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="________"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expView"
+                android:text="Expire Date"
+                android:layout_below="@id/prodNameView"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expSet"
+                android:layout_toStartOf="@id/expView"
+                android:layout_below="@id/prodNameSet"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="_______"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/qtyView"
+                android:text="Quantity"
+                android:layout_below="@id/expView"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/qtySet"
+                android:layout_toStartOf="@id/qtyView"
+                android:layout_below="@id/expSet"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="00"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:id="@+id/deleteButton"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

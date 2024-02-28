@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cqsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sectionAHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Cheques"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:id="@+id/sectionATodayCheques"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ListView
+                android:id="@+id/listViewA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <!-- Use a ListView, RecyclerView, or TextViews to display today's cheques -->
+            <!-- Add UI components dynamically based on 'todayCheques' data -->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sectionBHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Cheques"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:id="@+id/sectionBFutureCheques"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ListView
+                android:id="@+id/listViewB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <!-- Use a ListView, RecyclerView, or TextViews to display future cheques -->
+            <!-- Add UI components dynamically based on 'futureCheques' data -->
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

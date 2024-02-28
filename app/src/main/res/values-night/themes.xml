@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PointOfSales" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+         <item name="colorPrimary">@color/jade_green</item>
+    </style>
+
+
+
+    <style name="Button.hologreen" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/apple_light_green</item>
+    </style>
+
+</resources>

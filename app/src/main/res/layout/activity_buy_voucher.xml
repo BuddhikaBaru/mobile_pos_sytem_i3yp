@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuyVoucher"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:background="@color/jade_green"
+        android:elevation="10dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/headerbox">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stock_details"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:id="@+id/stdt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unbox"
+            android:layout_below="@+id/stdt"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:shadowColor="@color/black"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/billDateL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/BillDate"
+        android:layout_margin="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stockDate"
+            android:inputType="none"
+            android:maxLength="10"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/suppNameL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/suplier"
+        android:layout_margin="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/suppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="#546E7A" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/totValL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/total_value"
+        android:layout_margin="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/totVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColorHint="#546E7A" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        tools:ignore="RtlSymmetry">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/cocGroup"
+            tools:ignore="UselessParent">
+
+            <RadioButton
+                android:id="@+id/cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton android:id="@+id/cheque"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cheque"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/show_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Date"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_date"
+            android:layout_marginTop="10dp"
+            android:id="@+id/pick_date_button"
+            app:icon="@drawable/baseline_calendar_month_24"/>
+
+    </LinearLayout>
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/payDateL"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/pay_date_"-->
+<!--        android:layout_margin="20dp">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/payDate"-->
+<!--            android:inputType="none"-->
+<!--            android:maxLength="10"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/stockDateX"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_weight="5"-->
+<!--            android:height="48sp"-->
+<!--            android:autofillHints=""-->
+<!--            android:ems="12"-->
+<!--            android:hint="@string/date_vou"-->
+<!--            android:inputType="date"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColorHint="@color/editTextHintColor"-->
+<!--            android:textSize="20sp" />-->
+
+<!--    </LinearLayout>-->
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/suppName"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_weight="5"-->
+<!--            android:height="48sp"-->
+<!--            android:ems="12"-->
+<!--            android:hint="@string/suplier"-->
+<!--            android:inputType="text"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColorHint="#A1887F"-->
+<!--            android:textSize="20sp"-->
+<!--            android:autofillHints="" />-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;        <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/totVal"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="5"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:height="48sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:autofillHints=""&ndash;&gt;-->
+<!--&lt;!&ndash;            android:ems="12"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:hint="@string/total_value"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:inputType="text"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textAlignment="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColorHint="#A1887F"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp" />&ndash;&gt;-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/payDate"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_weight="5"-->
+<!--            android:height="48sp"-->
+<!--            android:autofillHints=""-->
+<!--            android:ems="12"-->
+<!--            android:hint="@string/pay_date_f"-->
+<!--            android:inputType="date"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColorHint="#A1887F"-->
+<!--            android:textSize="20sp" />-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/nextB"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textColor="@color/dark_aqua"
+            android:shadowColor="@color/black"/>
+
+        <Button
+            android:id="@+id/cancelVou"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/cancel_button_text"
+            android:textColor="@color/dark_crimson"
+            android:shadowColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

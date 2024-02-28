@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PointOfSales"
+        tools:targetApi="31">
+        <activity
+            android:name=".AverageCostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteExpItems"
+            android:exported="false" />
+        <activity
+            android:name=".LowItemsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpireItems"
+            android:exported="false" />
+        <activity
+            android:name=".StockDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cqsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewBill"
+            android:exported="false" />
+        <activity
+            android:name=".NewBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditDeleteProducts"
+            android:exported="false" />
+        <activity
+            android:name=".ViewCurrentStock"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStockBeforeAdd"
+            android:exported="false" />
+        <activity
+            android:name=".BuyVoucher"
+            android:exported="false" />
+        <activity
+            android:name=".AddStock"
+            android:exported="false" />
+        <activity
+            android:name=".ViewProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditDeleteCategory"
+            android:exported="false" />
+        <activity
+            android:name=".ViewCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".Main"
+            android:exported="false" />
+        <activity
+            android:name=".AddCategoryactivity"
+            android:exported="false" />
+        <activity
+            android:name=".InventoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+    </application>
+
+</manifest>

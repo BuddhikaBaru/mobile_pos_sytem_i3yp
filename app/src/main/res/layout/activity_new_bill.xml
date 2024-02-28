@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewBillActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="@string/start_a_new_bill"
+        android:paddingTop="5dp"
+        android:background="@color/jade_green"
+        android:textColor="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_marginTop="5dp"/>
+    <com.journeyapps.barcodescanner.CompoundBarcodeView
+        android:id="@+id/barcodeScannerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:ems="5"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:hint="@string/product"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:id="@+id/prodName"-->
+<!--        android:text=""-->
+<!--        android:layout_marginEnd="10dp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/addtocart"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/add_to_cart"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:backgroundTint="@color/normal_blue"/>-->
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Button to trigger barcode scanning -->
+
+<!--        <TextView-->
+<!--            android:id="@+id/unitPrice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:ems="4"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:hint="@string/unit_price"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:text=""-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/amount"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:ems="4"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:hint="@string/total_price"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:text=""-->
+<!--            />-->
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or Enter Manual"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:background="@color/jade_green"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prodNameM"
+        android:ems="12"
+        android:hint="@string/product"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:visibility="gone"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totPriceM"
+            android:ems="6"
+            android:hint="@string/total_price_a"
+            android:text=""
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+
+        <Button
+            android:id="@+id/addtocartM"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/normal_blue"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start">
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:ems="11"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:hint="@string/total_value"-->
+<!--            android:textSize="22sp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:id="@+id/totValue"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/jade_green"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/checkout"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/view_bill"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:backgroundTint="@color/dark_crimson"/>-->
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/barcode"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_weight="3"
+                android:hint="@string/barcode"
+                android:text=""
+                android:textSize="14sp"
+                />
+            <EditText
+                android:id="@+id/qty"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:hint="@string/quantity"
+                android:text=""
+                android:inputType="number"/>
+            <Button
+                android:id="@+id/scanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#8823D594"
+            android:paddingBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:ems="5"
+                android:layout_marginStart="5dp"
+                android:hint="@string/product"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:id="@+id/prodName"
+                android:text=""
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/unitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:ems="4"
+                android:layout_marginStart="10dp"
+                android:hint="@string/unit_price"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:text=""
+                />
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:ems="4"
+                android:layout_marginStart="10dp"
+                android:hint="@string/total_price"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:text=""
+                />
+
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8823D594"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:ems="5"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/next_cart_value"
+                    android:textSize="18sp"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/tempCartVal"
+                    android:text=""
+                    android:layout_weight="2" />
+                <Button
+                    android:id="@+id/addtocart"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_to_cart"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/jade_green"
+        android:paddingBottom="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:ems="11"
+                android:hint="@string/total_value"
+                android:textSize="22sp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/totValue"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/checkout"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_bill"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/dark_crimson"
+                android:textColor="@color/white"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>

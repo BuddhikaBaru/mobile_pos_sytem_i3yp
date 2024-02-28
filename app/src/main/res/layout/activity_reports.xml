@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportsActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/todayCard"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/todayDate"
+                    android:text="@string/today"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="24sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todaySalesTxt"
+                    android:text="@string/today_sales_RS"
+                    android:layout_below="@id/todayDate"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todaySales"
+                    android:layout_toStartOf="@id/todaySalesTxt"
+                    android:layout_below="@id/todayDate"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todayProfTxt"
+                    android:text="@string/Today_Profit"
+                    android:layout_below="@id/todaySales"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todayProfit"
+                    android:layout_toStartOf="@id/todayProfTxt"
+                    android:layout_below="@id/todaySales"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/todayPayTxt"-->
+<!--                    android:text="@string/Today_Payments"-->
+<!--                    android:layout_below="@id/todayProfTxt"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/todayPays"-->
+<!--                    android:layout_toStartOf="@id/todayPayTxt"-->
+<!--                    android:layout_below="@id/todayProfit"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="@string/_0000_00"/>-->
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/allTimeCard"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:id="@+id/AlltimeRlayout">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/alltimeTxt"
+                    android:text="@string/all_time_summery"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="24sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allSalesTxt"
+                    android:text="@string/all_sales_txt"
+                    android:layout_below="@id/alltimeTxt"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allSales"
+                    android:layout_toStartOf="@id/allSalesTxt"
+                    android:layout_below="@id/alltimeTxt"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allProfitTxt"
+                    android:text="@string/all_profit"
+                    android:layout_below="@id/allSalesTxt"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allProfit"
+                    android:layout_toStartOf="@id/allProfitTxt"
+                    android:layout_below="@id/allSales"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stockValTxt"
+                    android:text="@string/stock_value"
+                    android:layout_below="@id/allProfit"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stockVal"
+                    android:layout_below="@id/allProfit"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chequesCard"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:id="@+id/chequesbox">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/chequesHead"
+                    android:text="@string/Cheques"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="24sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chequeCountTxt"
+                    android:text="@string/pending_cheques"
+                    android:layout_below="@id/chequesHead"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chequecount"
+                    android:layout_toStartOf="@id/chequeCountTxt"
+                    android:layout_below="@id/chequesHead"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chequeValTxt"
+                    android:text="@string/total_to_pay_rs"
+                    android:layout_below="@id/chequeCountTxt"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chequeVal"
+                    android:layout_toStartOf="@id/chequeValTxt"
+                    android:layout_below="@id/chequecount"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nextChqDateTxt"
+                    android:text="@string/Next_Cheque_Date"
+                    android:layout_below="@id/chequeValTxt"
+                    android:layout_alignParentStart="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nextChequeDate"
+                    android:layout_toStartOf="@id/nextChqDateTxt"
+                    android:layout_below="@id/chequeVal"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/_0000_00"/>
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost Average"
+                android:layout_marginTop="10dp"
+                android:id="@+id/avgCost"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>

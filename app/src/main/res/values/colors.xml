@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_maroon">#B00020</color>
+    <color name="editTextHintColor">#A1887F</color>
+    <color name="apple_light_green">#90EE90</color>
+    <color name="bean_red">#F75D59</color>
+    <color name="dark_aqua">#007A50</color>
+    <color name="dark_crimson">#AF1333</color>
+    <color name="normal_blue">#123ABC</color>
+    <color name="jade_green">#00A86B</color>
+</resources>
